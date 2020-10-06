@@ -6,6 +6,7 @@ Functions defined in global scope can access all variables at global scope level
 Functions defined inside another function have access to all the variables of its parent function.
 
 _Example Given_:
+
 `
 var name = 'Neha';
     surname: 'Verma';
