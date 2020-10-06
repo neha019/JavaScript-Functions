@@ -7,7 +7,7 @@ Functions defined inside another function have access to all the variables of it
 
 _Example Given_:
 
-`
+```javascript
 var name = 'Neha';
     surname: 'Verma';
 
@@ -31,5 +31,5 @@ function getScore() {
 }
 
 getScore(); // Returns "Neha scored 5"
-`
+```
 
