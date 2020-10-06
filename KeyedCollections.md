@@ -42,5 +42,9 @@ val.next().value;
 - Use maps if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.
 - Use objects when there is logic that operates on individual elements.
 
+## Sets
+As the name suggests, its a collection of values which are uniquesly held, may only occur once.
+
+```javascript
 
 
