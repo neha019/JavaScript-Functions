@@ -14,6 +14,11 @@ As the Promise.prototype.then() and Promise.prototype.catch() methods return pro
 
 ![](promises.png?raw=true)
 
+## Advantages of Promise:
+- Callbacks will never be called before the completion of the current run of the JavaScript event loop.
+- Callbacks added with then(), as above, will be called even after the success or failure of the asynchronous operation.
+- Multiple callbacks may be added by calling then() several times. Each callback is executed one after another, in the order in which they were inserted.
+- Chaining
 
 **Old Style of passing callbacks in function :**
 
@@ -67,6 +72,43 @@ let promise = new Promise(function(resolve, reject) {
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
 ```
+
+## Chaining
+- To execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, can be accomplished by creating a promise chain.
+``` javascript
+const promise2 = doSomething().then(successCallback, failureCallback);
+
+doSomething()
+.then(result => doSomethingElse(result))
+.then(newResult => doThirdThing(newResult))
+.then(finalResult => {
+  console.log(`Got the final result: ${finalResult}`);
+})
+.catch(failureCallback);
+```
+
+### Chaining after Catch
+``` javascript
+new Promise((resolve, reject) => {
+    console.log('Initial');
+    resolve();
+})
+.then(() => {
+    throw new Error('Something failed'); 
+    console.log('Do this');
+})
+.catch(() => {
+    console.error('Do that');
+})
+.then(() => {
+    console.log('Do this, no matter what happened before');
+});
+
+This will output as follows:
+- Initial
+- Do that
+- Do this, no matter what happened before
+``` 
 
 **Promise.all()** 
 
