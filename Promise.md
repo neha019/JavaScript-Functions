@@ -5,10 +5,10 @@ The Promise object represents the eventual completion (or failure) of an asynchr
 
 A Promise is a returned object to which we attach callbacks , instead of passing callbacks into a function.
 
-> A _Promise_ is one of these states :
-> - _pending_ : initial state , neither fulfilled nor rejected.
-> - _fulfilled_ : meaning that the operation commpleted successfully.
-> - _rejected_ : meaning that the operation failed.
+- A _Promise_ is one of these states :
+- _pending_ : initial state , neither fulfilled nor rejected.
+- _fulfilled_ : meaning that the operation commpleted successfully.
+- _rejected_ : meaning that the operation failed.
 
 As the Promise.prototype.then() and Promise.prototype.catch() methods return promises , they can be chained .
 
