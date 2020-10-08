@@ -1,6 +1,6 @@
 # Promise
 
-> ## What is Promise ?
+## What is Promise ?
 The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
 
 A Promise is a returned object to which we attach callbacks , instead of passing callbacks into a function.
@@ -68,14 +68,14 @@ let promise = new Promise(function(resolve, reject) {
 });
 ```
 
-> **Promise.all()** 
+**Promise.all()** 
 
 Promise.all(iterable) method returns a single _Promise_ that resolves when all of Promises in the iterable argument have resolved or when the iterable argument contains no promises. It rejects with the reason of the first promise that rejects.
 
->**Syntax :** 
+**Syntax :** 
   >Promise.all(iterable); 
 
-> **Return Value :** 
+**Return Value :** 
 - An already resolved Promise if the iterable passed is empty.
 - An asynchronously resolved Promise if the iterable passed contains no promises. Note, Google Chrome 58 returns an already resolved promise in this case.
 - A pending Promise in all other cases. 
@@ -123,11 +123,11 @@ promise1.catch(function(error) {
 // expected output: Uh-oh! 
 ``` 
 
-> **Promise.prototype.finally() :** 
+**Promise.prototype.finally() :** 
 
 The _finally()_ method returns a Promise, whether the promise is settled, fulfilled or rejected. This lets you avoid duplicating code in both the promise's _then()_ and _catch()_ handlers.
 
-> **Syntax :**
+**Syntax :**
 
 ``` 
 p.finally(onFinally);
@@ -137,7 +137,7 @@ p.finally(function() {
 }); 
 ``` 
 
-> **Example of Promise.prototype.finally() :** 
+**Example of Promise.prototype.finally() :** 
 
 ```javascript 
 function getData() {
